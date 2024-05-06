@@ -12,7 +12,14 @@ enum PDFWhitespaceCharTable {
   static bool isWhiteSpace(int byte) {
     return PDFWhitespaceCharTable.values.map((e) => e.value).contains(byte);
   }
+
+  static bool isLineFeed(int byte) {
+    return byte == lineFeed.value;
+  }
 }
+
+const dictionaryStart = "<<";
+const dictionaryEnd = ">>";
 
 enum PDFDelimiterChar {
   leftParenthesis(40),

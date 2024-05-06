@@ -36,6 +36,4 @@ void main() async {
   final file = File('lib/racun.pdf');
   final bytes = await file.readAsBytes();
   final extractor = PDFExtractor(bytes: bytes);
-
-  print(extractor.identity?.identity);
 }
